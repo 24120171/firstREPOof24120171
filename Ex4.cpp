@@ -2,7 +2,8 @@
 using namespace std;
 // Recursive function to solve Tower of Hanoi
 void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod) {
-	if (n == 1) {		cout << "Move disk 1 from " << from_rod << " to " << to_rod << endl;
+	if (n == 1) {
+		cout << "Move disk 1 from " << from_rod << " to " << to_rod << endl;
 		return;
 	}
 	towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
@@ -13,4 +14,5 @@ int main() {
 	int n; // Number of disks
 	cin >> n;
 	towerOfHanoi(n, 'A', 'C', 'B');
-	return 0;}
+	return 0;
+}
